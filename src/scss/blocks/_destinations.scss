@@ -1,0 +1,75 @@
+.destinations {
+	overflow-x: hidden;
+	margin-bottom: 200px;
+
+	&__row {
+		display: flex;
+	}
+
+	&__slider {
+		width: 1110px;
+		flex-shrink: 0;
+	}
+
+
+	&__title {
+		font-size: 55px;
+		line-height: 82px;
+		font-weight: 600;
+		color: $text;
+		margin-bottom: 15px;
+
+		span {
+			font-size: 30px;
+			line-height: 45px;
+		}
+	}
+
+	&__text {
+		font-size: 25px;
+		line-height: 38px;
+		font-weight: 500;
+		color: $secondary;
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		max-width: 456px;
+	}
+
+	&__button {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 600;
+		color: #fefefe;
+		padding: 25px 45px;
+		background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+		border-radius: 27px;
+
+		&:hover {
+			color: #f3ff4e;
+			transition: all 0.3s ease;
+		}
+
+		&:active {
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+
+
+
+.slider__item {
+	width: 335px;
+	height: 402px;
+	object-fit: cover;
+	border-radius: 35px;
+}
+
+
+.slider .center .slider__item {
+	width: 380px;
+	height: 456px;
+}

@@ -9,13 +9,19 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/favicon/fav-icon.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Travel</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header none">
         <div class="container">
             <div class="header__top">
                 <nav class="nav">
@@ -43,13 +49,41 @@
                     <div class="header__text">
                         <p>explore the beauty of god's earth in a beautiful forest and have fun</p>
                     </div>
-                    <a class="header__button" href="#">Exsplore Now</a>
+                    <a class="header__button" href="#">Explore Now</a>
                 </div>
                 <div class="header__img"><img src="img/header/header-person2.png" alt="person"></div>
             </div>
         </div>
     </header>
-
+    <main>
+        <section class="destinations">
+            <div class="container-right">
+                <div class="destinations__row">
+                    <div class="destinations__content">
+                        <h2 class="destinations__title"><span>Choice Of</span><br /> Destinations</h2>
+                        <p class="destinations__text">explore the beauty of god's earth in a beautiful forest and have
+                            fun</p>
+                        <a class="destinations__button" href="#">Explore Now</a>
+                    </div>
+                    <div class="destinations__slider">
+                        <div class="slider">
+                            <div class="owl-carousel">
+                                <img class="slider__item" src="img/slider/slider-img-1.jpg" alt="slider image">
+                                <img class="slider__item" src="img/slider/slider-img-2.jpg" alt="slider image">
+                                <img class="slider__item" src="img/slider/slider-img-3.jpg" alt="slider image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/app.js"></script>
 </body>
 
