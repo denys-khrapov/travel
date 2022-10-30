@@ -85,8 +85,8 @@
 
 }
 
-.slick-list.draggable {
-	padding: 0px 0px 0px 100px;
+.slider .slick-list {
+	padding: 0 24px;
 }
 
 .slick-slide img {
@@ -139,7 +139,7 @@
 		background-image: url(../img/slider/arrow-right.svg);
 	}
 
-	right: 0;
+	right: -4.5px;
 }
 
 .slider .slick-slide,
