@@ -1,8 +1,9 @@
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
-    center: true,
-    startPosition: 1,
-    loop: true,
-    margin: 30,
+  $(".slider").slick({
+    slidesToShow: 3,
+    infinite: true,
+    arrows: true,
+    variableWidth: true,
+    centerMode: true,
   });
 });

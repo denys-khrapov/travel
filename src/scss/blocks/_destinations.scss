@@ -2,15 +2,11 @@
 	overflow-x: hidden;
 	margin-bottom: 200px;
 
+
+
 	&__row {
 		display: flex;
 	}
-
-	&__slider {
-		width: 1110px;
-		flex-shrink: 0;
-	}
-
 
 	&__title {
 		font-size: 55px;
@@ -34,7 +30,11 @@
 	}
 
 	&__content {
-		max-width: 456px;
+		width: 38.5%;
+	}
+
+	&__slider {
+		width: 61.5%;
 	}
 
 	&__button {
@@ -62,14 +62,94 @@
 
 
 .slider__item {
-	width: 335px;
-	height: 402px;
+	transition: all 0.3s ease;
+	text-align: center;
+	width: 380px;
+
+
+	.image-holder {
+		position: relative;
+		width: 100%;
+		padding-top: 120%;
+	}
+}
+
+.slider {
+	margin: 0 calc(620px - 50vw) 0 0;
+}
+
+.slider__item.slick-current {
+	+.slick-active {
+		transition: all 0.3s ease;
+	}
+
+}
+
+.slick-list.draggable {
+	padding: 0px 0px 0px 100px;
+}
+
+.slick-slide img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	border-radius: 35px;
 }
 
+.slider .slick-arrow {
+	font-size: 0;
+	width: 68px;
+	height: 68px;
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #8B8B8B;
+	border-radius: 34px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	z-index: 10;
+	cursor: pointer;
 
-.slider .center .slider__item {
-	width: 380px;
-	height: 456px;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-image: url(../img/slider/arrow-left.svg);
+		width: 16px;
+		height: 20px;
+	}
+}
+
+.slider .slick-arrow.slick-prev {
+	&::before {
+		background-image: url(../img/slider/arrow-left.svg);
+
+	}
+
+	left: -4.5px;
+}
+
+.slider .slick-arrow.slick-next {
+	&::before {
+		background-image: url(../img/slider/arrow-right.svg);
+	}
+
+	right: 0;
+}
+
+.slider .slick-slide,
+.slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+	padding: 27.5px 22.5px;
+	transition: padding 0.3s;
+}
+
+/* slide when active/center */
+.slider .slick-center,
+.slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+	padding: 0;
 }
