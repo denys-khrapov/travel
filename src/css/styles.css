@@ -61,6 +61,7 @@ a {
   background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
   padding: 13px 44px;
   border-radius: 50px;
+  transition: all 0.3s ease;
 }
 .button:hover {
   color: #f3ff4e;
@@ -384,4 +385,58 @@ a {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 30px;
+}
+
+.cta {
+  margin-bottom: 135px;
+}
+.cta__plate {
+  position: relative;
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 115px 0px 115px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta__plate::before, .cta__plate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 63px;
+  height: 83px;
+}
+.cta__plate::before {
+  bottom: 56px;
+  left: 74px;
+  background-image: url(../img/cta/cta-el-02.svg);
+}
+.cta__plate::after {
+  top: 74px;
+  right: 80px;
+  background-image: url(../img/cta/cta-el-01.svg);
+}
+.cta__title {
+  color: #0F1F1C;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 68px;
+  margin-bottom: 30px;
+}
+.cta__text {
+  margin-bottom: 60px;
+}
+.cta__text p {
+  color: rgba(15, 31, 28, 0.5);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+}
+.cta__button {
+  padding: 25px 55px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 27px;
 }
