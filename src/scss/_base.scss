@@ -18,6 +18,13 @@ body {
 	background: $bg;
 	color: $text;
 	font-weight: 400;
+
+	@media screen and (max-width:1024px) {
+		&.active {
+			overflow-y: hidden;
+			overflow-x: hidden;
+		}
+	}
 }
 
 img {

@@ -1,0 +1,57 @@
+@mixin placeholder($color, $size, $weight) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+}
+
+@mixin link ($link, $hover, $active) {
+	color: $link;
+
+	&:hover {
+		color: $hover;
+	}
+
+	&:active {
+		color: $active;
+	}
+}
+
+
+@mixin center-xy() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-x() {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin center-y() {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}

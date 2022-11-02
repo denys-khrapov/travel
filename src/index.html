@@ -23,6 +23,7 @@
                     <div class="nav__logo">
                         <a href="/" class="logo">GoTravel</a>
                     </div>
+
                     <ul class="nav__list">
                         <li><a class="nav__link" href="#">Home</a></li>
                         <li><a class="nav__link" href="#">Services</a></li>
@@ -33,6 +34,11 @@
                         <li><a href="/">Sign up</a></li>
                         <li><a href="/" class="button">Login</a></li>
                     </ul>
+                    <div class="nav__toggle mobile-btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </nav>
             </div>
             <div class="header__row">
@@ -118,8 +124,25 @@
                             <p class="review__text">Very satisfying service makes it comfortable, a beautiful place in
                                 the world.
                             </p>
-                            <div class="review__rating">
-                                <img src="img/customers/stars-rating.svg" alt="rating">
+                            <div class="review-rating">
+                                <div class="review-rating__items">
+                                    <input id="review-rating__5" class="review-rating__item" type="radio"
+                                        name="review-rating" value="5">
+                                    <label for="review-rating__5" class="review-rating__label"></label>
+                                    <input id="review-rating__4" class="review-rating__item" checked type="radio"
+                                        name="review-rating" value="4">
+                                    <label for="review-rating__4" class="review-rating__label"></label>
+                                    <input id="review-rating__3" class="review-rating__item" type="radio"
+                                        name="review-rating" value="3">
+                                    <label for="review-rating__3" class="review-rating__label"></label>
+                                    <input id="review-rating__2" class="review-rating__item" type="radio"
+                                        name="review-rating" value="2">
+                                    <label for="review-rating__2" class="review-rating__label"></label>
+                                    <input id="review-rating__1" class="review-rating__item" type="radio"
+                                        name="review-rating" value="1">
+                                    <label for="review-rating__1" class="review-rating__label"></label>
+                                </div>
+                                <!-- <img src="img/customers/stars-rating.svg" alt="rating"> -->
                             </div>
                         </div>
                     </div>

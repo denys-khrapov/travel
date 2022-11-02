@@ -1,6 +1,10 @@
 .subscribe {
 	margin-bottom: 106px;
 
+	@media screen and (max-width: 480px) {
+		margin-bottom: 50px;
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -17,6 +21,14 @@
 		font-weight: 600;
 		line-height: 82px;
 		color: $text;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 3C0px;
+			font-size: 38px;
+			font-weight: 500;
+			line-height: 55px;
+
+		}
 	}
 
 	&-form {
@@ -29,9 +41,20 @@
 		background-color: $white;
 		border-radius: 35px;
 
+		@media screen and (max-width: 480px) {
+			flex-direction: column;
+		}
+
 		&__input {
 			outline: none;
 			border: none;
+
+			@media screen and (max-width: 480px) {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				border-bottom: 2px solid $secondary;
+				margin-bottom: 15px;
+			}
 		}
 
 		&__button {
@@ -43,6 +66,13 @@
 			outline: none;
 			border: none;
 			cursor: pointer;
+
+			@media screen and (max-width: 768px) {
+				padding: 10px 28px;
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 25px;
+			}
 		}
 	}
 }
@@ -53,11 +83,9 @@
 	width: 100%;
 	font-size: 24px;
 	font-weight: 500;
-}
 
-.subscribe-form__input::placeholder {
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 36px;
-	color: $secondary;
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		font-weight: 400;
+	}
 }

@@ -35,7 +35,7 @@ function browsersync() {
 
 function scripts() {
   return src([
-    // 'node_modules/jquery/dist/jquery.min.js',
+    // "node_modules/jquery/dist/jquery.min.js",
     "src/js/app.js",
   ])
     .pipe(dest("build/js/"))
@@ -43,26 +43,25 @@ function scripts() {
 }
 
 // function scriptsBuild() {
-// 	return src([
-// 		'node_modules/jquery/dist/jquery.min.js',
-// 		'src/js/app.js',
-// 	])
-// 		.pipe(concat('app.min.js'))
-// 		.pipe(uglify())
-// 		.pipe(dest('build/js/'))
+//   return src(["node_modules/jquery/dist/jquery.min.js", "src/js/app.js"])
+//     .pipe(concat("app.min.js"))
+//     .pipe(uglify())
+//     .pipe(dest("build/js/"));
 // }
 
 function styles() {
-  return src("src/scss/**/*.scss")
-    .pipe(sourceMaps.init())
-    .pipe(
-      autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: false })
-    )
-    .pipe(sourceMaps.write())
-    .pipe(sass())
-    .pipe(dest("src/css/"))
-    .pipe(dest("build/css/"))
-    .pipe(browserSync.stream());
+  return (
+    src("src/scss/**/*.scss")
+      .pipe(sourceMaps.init())
+      // .pipe(
+      //   autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: false })
+      // )
+      .pipe(sourceMaps.write())
+      .pipe(sass())
+      .pipe(dest("src/css/"))
+      .pipe(dest("build/css/"))
+      .pipe(browserSync.stream())
+  );
 }
 
 function stylesBuild() {

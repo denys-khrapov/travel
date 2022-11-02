@@ -1,14 +1,29 @@
 .customers {
 	margin-bottom: 233px;
 
+	@media screen and (max-width: 1024px) {
+		margin-bottom: 115px;
+	}
+
 
 	&__row {
 		display: flex;
 		column-gap: 68px;
+
+		@media screen and (max-width: 1200px) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+
 	}
 
 	&__image {
 		max-width: 478px;
+
+		@media screen and (max-width: 480px) {
+			padding: 10px 65px;
+		}
 	}
 
 	&__image img {
@@ -19,20 +34,49 @@
 		font-size: 45px;
 		font-weight: 500;
 		margin-bottom: 35px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 25px;
+		}
 	}
 
 	&__content {
 		max-width: 491px;
+		width: 100%;
+
+		@media screen and (max-width: 1200px) {
+			max-width: unset;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
 	}
 }
 
 .review {
+
+	@media screen and (max-width: 1200px) {
+		margin-bottom: 30px;
+	}
+
+	@media screen and (max-width: 480px) {
+		margin-bottom: 10px;
+	}
 
 	&__client {
 		display: flex;
 		align-items: center;
 		column-gap: 33px;
 		margin-bottom: 60px;
+
+		@media screen and (max-width: 1200px) {
+			justify-content: center;
+		}
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 30px;
+		}
 
 		&-avatar {
 			overflow: hidden;
@@ -48,9 +92,17 @@
 				font-size: 33px;
 				font-weight: 500;
 
+				@media screen and (max-width: 768px) {
+					font-size: 23px;
+				}
+
 				+p {
 					font-size: 25px;
 					color: $secondary;
+
+					@media screen and (max-width: 768px) {
+						font-size: 18px;
+					}
 				}
 			}
 		}
@@ -61,5 +113,66 @@
 		font-size: 22px;
 		font-weight: 500;
 		margin-bottom: 30px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
+			max-width: 400px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.review-rating {
+		position: relative;
+		font-size: 40px;
+		display: inline-block;
+
+		&::before {
+			content: '★★★★★';
+			display: block;
+		}
+	}
+
+	.review-rating__items {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: row-reverse;
+		overflow: hidden;
+	}
+
+	.review-rating__item {
+		position: absolute;
+		width: 0%;
+		height: 0%;
+		opacity: 0;
+		visibility: hidden;
+		top: 0;
+		left: 0;
+	}
+
+	.review-rating__label {
+		flex: 0 0 20%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	.review-rating__label::before {
+		content: '★';
+		display: block;
+		transition: color 0.3s ease 0s;
+	}
+
+	.review-rating__item:checked,
+	.review-rating__item:checked~.review-rating__label {
+		color: #ffd300;
+	}
+
+	.review-rating__label:hover,
+	.review-rating__label:hover~.review-rating__label,
+	.review-rating__label:checked~.review-rating__label:hover {
+		color: $yellow;
 	}
 }

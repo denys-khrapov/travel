@@ -1,47 +1,23 @@
 .footer {
 	padding-bottom: 74px;
+
+	@media screen and (max-width: 480px) {
+		padding-bottom: 35px;
+	}
 }
+
+.nav__logo {
+	margin: 0 auto;
+}
+
 
 .logo {
 	&--footer {
+		font-size: 35px;
 		color: $orange;
-	}
-}
 
-.nav {
-	&__link {
-		&--footer {
-			color: $secondary;
-			transition: all 0.3s ease;
-
-			&.active-link {
-				color: $orange;
-			}
-
-			&:hover {
-				color: $orange;
-			}
-
-			&::before {
-				display: none;
-			}
-		}
-	}
-
-	&__login {
-		&--footer {
-			font-weight: 500;
-			color: $secondary;
-		}
-	}
-}
-
-.button {
-	&--footer {
-		color: $white;
-
-		&:hover {
-			color: $yellow;
+		@media screen and (max-width: 480px) {
+			font-size: 25px;
 		}
 	}
 }
